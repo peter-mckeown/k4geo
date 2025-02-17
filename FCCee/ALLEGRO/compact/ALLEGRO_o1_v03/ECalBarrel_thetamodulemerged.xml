@@ -99,8 +99,12 @@
     </readout>
   </readouts>
 
+  <regions>
+    <region name="ECalBarrelRegion"/>
+  </regions>
+  
   <detectors>
-    <detector id="BarECal_id" name="ECalBarrel" type="ECalBarrel_NobleLiquid_InclinedTrapezoids_o1_v03" readout="ECalBarrelModuleThetaMerged">
+    <detector id="BarECal_id" name="ECalBarrel" type="ECalBarrel_NobleLiquid_InclinedTrapezoids_o1_v03" readout="ECalBarrelModuleThetaMerged" region="ECalBarrelRegion">
       <type_flags type=" DetType_CALORIMETER + DetType_ELECTROMAGNETIC + DetType_BARREL"/>
       <sensitive type="SimpleCalorimeterSD"/>
       <dimensions rmin="BarCryoECal_rmin" rmax="BarCryoECal_rmax" dz="BarCryoECal_dz" vis="ecal_envelope"/>

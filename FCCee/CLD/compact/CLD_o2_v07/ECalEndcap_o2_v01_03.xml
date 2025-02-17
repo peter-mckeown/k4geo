@@ -10,10 +10,14 @@
         </readout>
     </readouts>
 
+    <regions>
+        <region name="ECalEndcapRegion"/>
+    </regions>
+
     <!--  Includes for sensitives and support                -->
     <detectors>
 
-        <detector name="ECalEndcap" type="GenericCalEndcap_o1_v01" id="DetID_ECal_Endcap" readout="ECalEndcapCollection" vis="ECALVis" >
+        <detector name="ECalEndcap" type="GenericCalEndcap_o1_v01" id="DetID_ECal_Endcap" readout="ECalEndcapCollection" vis="ECALVis" region="ECalEndcapRegion">
 
             <comment>Electromagnetic Calorimeter Endcap</comment>
 
