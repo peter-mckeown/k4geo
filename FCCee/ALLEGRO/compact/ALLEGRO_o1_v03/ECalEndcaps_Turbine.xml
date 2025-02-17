@@ -72,7 +72,7 @@
 
 
   <readouts>
-   <readout name="ECalEndcapTurbine">
+   <readout name="ECalEndcapCollection">
 <!-- temporarily use the same segmentation as the barrel ECal, since that works in reco, even though it's not ideal (or maybe not even tenable) for the endcap 
  <segmentation type="FCCSWGridModuleThetaMerged_k4geo" nModules="928" mergedCells_Theta="1 1 1 1 1 1 1 1 1 1" mergedModules="1 1 1 1 1 1 1 1 1 1" grid_size_theta="0.009817477/4" offset_theta="0.08"/>
         <id>system:4,cryo:1,type:3,subtype:3,side:3,wheel:3,layer:8,module:11,theta:10</id>
@@ -101,7 +101,7 @@
 
   <detectors>
      <!-- electromagnetic calorimeter -->
-    <detector id="ECalEndcap_id" name="EMEC_turbine" type="ECalEndcap_Turbine_o1_v01" readout="ECalEndcapTurbine" vis="emec_envelope_vis" sensitive="true" region="ECalEndcapRegion">
+    <detector id="ECalEndcap_id" name="EMEC_turbine" type="ECalEndcap_Turbine_o1_v01" readout="ECalEndcapCollection" vis="emec_envelope_vis" sensitive="true" region="ECalEndcapRegion">
       <type_flags type=" DetType_CALORIMETER + DetType_ELECTROMAGNETIC + DetType_ENDCAP"/>
       <sensitive type="SimpleCalorimeterSD"/>
       <!--  <dimensions rmin1="EMEC_rmin1"  rmin2="EMEC_rmin2" rmax="EMEC_rmax" dz="(EMEC_z2-EMEC_z1)/2." z_offset="EMEC_z1+(EMEC_z2-EMEC_z1)/2."/>  -->
