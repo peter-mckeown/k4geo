@@ -633,6 +633,9 @@ createECalEndcapTurbine(dd4hep::Detector& aLcdd, dd4hep::xml::Handle_t aXmlEleme
   //  dd4hep::DetElement caloPositiveDetElem(caloDetElem, "positive", 0);
   //  dd4hep::DetElement caloNegativeDetElem(caloDetElem, "negative", 0);
 
+  // Set region, limitset, and visibility of layer
+  envelopeVol.setAttributes(aLcdd, xmlDetElem.regionStr(), xmlDetElem.limitsStr(), xmlDetElem.visStr());
+
   unsigned iModule = 0;
   buildOneSide_Turbine(aLcdd, aSensDet, envelopeVol,  aXmlElement, iModule);
 
