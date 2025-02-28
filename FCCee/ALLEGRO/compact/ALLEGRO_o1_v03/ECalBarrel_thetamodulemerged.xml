@@ -104,8 +104,18 @@
   </regions>
   
   <detectors>
-    <detector id="BarECal_id" name="ECalBarrel" type="ECalBarrel_NobleLiquid_InclinedTrapezoids_o1_v03" readout="ECalBarrelCollection" region="ECalBarrelRegion">
+    <detector id="BarECal_id" name="ECalBarrel" type="ECalBarrel_NobleLiquid_InclinedTrapezoids_o1_v03" readout="ECalBarrelCollection" vis="ECALVis" region="ECalBarrelRegion">
+      
       <type_flags type=" DetType_CALORIMETER + DetType_ELECTROMAGNETIC + DetType_BARREL"/>
+
+      <envelope vis='ECALVis'>
+        <shape type="Tube" rmin="BarCryoECal_rmin" rmax="BarCryoECal_rmax" dz="BarCryoECal_dz" material="Air"/>
+        <rotation x="0*deg" y="0*deg" z="0*deg"/>
+        <position x="0" y="0" z="0"/>
+      </envelope>
+
+      <dimensions rmin="BarCryoECal_rmin" rmax="BarCryoECal_rmax" dz="BarCryoECal_dz"/>
+
       <sensitive type="SimpleCalorimeterSD"/>
       <dimensions rmin="BarCryoECal_rmin" rmax="BarCryoECal_rmax" dz="BarCryoECal_dz" vis="ecal_envelope"/>
       <cryostat name="ECAL_Cryo">
@@ -166,4 +176,5 @@
       </calorimeter>
     </detector>
   </detectors>
+
 </lccdd>

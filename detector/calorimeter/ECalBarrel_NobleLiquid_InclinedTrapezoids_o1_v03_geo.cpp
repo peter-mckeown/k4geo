@@ -32,6 +32,7 @@ static dd4hep::detail::Ref_t createECalBarrelInclined(dd4hep::Detector& aLcdd,
   dd4hep::Volume envelopeVol(nameDet + "_vol", dd4hep::Tube(dim.rmin(), dim.rmax(), dim.dz()),
                                        aLcdd.material("Air"));
   // Set region, limitset, and visibility of layer
+  envelopeVol.setVisAttributes(aLcdd, xmlDetElem.visStr());
   envelopeVol.setAttributes(aLcdd, xmlDetElem.regionStr(), xmlDetElem.limitsStr(), xmlDetElem.visStr());
   lLog << MSG::INFO << "Region: " << xmlDetElem.regionStr() << endmsg;
 
