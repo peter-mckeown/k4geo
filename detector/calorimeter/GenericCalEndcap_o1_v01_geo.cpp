@@ -158,8 +158,11 @@ static Ref_t create_detector(Detector& theDetector, xml_h e, SensitiveDetector s
             
             slice_vol.setVisAttributes(theDetector.visAttributes(x_slice.visStr()));
             sliceZ += slice_thickness/2;
-            layer_vol.placeVolume(slice_vol,Position(0,0,sliceZ));
+            //layer_vol.placeVolume(slice_vol,Position(0,0,sliceZ));
             
+            PlacedVolume slice_phv = layer_vol.placeVolume(slice_vol,Position(0,0,sliceZ));
+            slice_phv.addPhysVolID("submodule", slice_num);
+
             nRadiationLengths += slice_thickness/(2.*slice_material.radLength());
             nInteractionLengths += slice_thickness/(2.*slice_material.intLength());
             thickness_sum += slice_thickness/2;
