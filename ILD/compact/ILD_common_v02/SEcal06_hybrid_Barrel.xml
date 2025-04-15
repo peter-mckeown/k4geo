@@ -5,7 +5,34 @@
     </region>
   </regions>
 
+  <regions>
+    <region name="EcalBarrelFastSimTriggerRegion">
+    </region>
+  </regions>
+
+  <readouts>
+        <readout name="ECalBarrelFaceReadout">
+            <id>system:5,side:2,layer:9,module:8,sensor:8</id>
+        </readout>
+    </readouts>
+
   <detectors>
+
+    <detector name="EcalBarrelFastSimTrigger" type="PolyhedralBarrelSurfaces" region="EcalBarrelFastSimTriggerRegion" readout="ECalBarrelFaceReadout">
+      <comment> EM Calorimeter Fast Sim Trigger Region </comment>
+       
+      <envelope vis="ILD_ECALVis">
+        <shape type="PolyhedraRegular" numsides="Ecal_symmetry"  rmin="Ecal_inner_radius - 3*env_safety" 
+        rmax="Ecal_inner_radius - 2*env_safety" dz="2.*Ecal_half_length + env_safety"  material = "Air" />
+        <rotation x="0*deg" y="0*deg" z="-180*deg/Ecal_symmetry"/>
+      </envelope>
+      
+      <dimensions numsides="Ecal_symmetry" rmin="Ecal_inner_radius - 3*env_safety" 
+      rmax="Ecal_inner_radius - 2*env_safety" zhalf="Ecal_half_length"
+      phi0="-180*deg/Ecal_symmetry" material = "Air" />
+
+  </detector>
+
 
     <detector name="EcalBarrel" type="SEcal06_Barrel" id="ILDDetID_ECAL" readout="EcalBarrelCollection" vis="ILD_BlueVis"
      region="EcalBarrelRegion">
