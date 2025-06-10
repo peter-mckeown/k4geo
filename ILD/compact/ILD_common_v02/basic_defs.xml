@@ -14,6 +14,10 @@
   <constant name="ILDDetID_ETD"          value="  6"/>
   <constant name="ILDDetID_OT_Barrel"    value="  7"/>
   <constant name="ILDDetID_OT_Endcap"    value="  8"/>
+
+  <constant name="ILDDetID_ECAL_ENDCAP_FACE" value="18"/>
+  <constant name="ILDDetID_ECAL_BARREL_FACE" value="19"/>
+
   <constant name="ILDDetID_ECAL"         value=" 20"/>
   <constant name="ILDDetID_ECAL_PLUG"    value=" 21"/>
   <constant name="ILDDetID_HCAL"         value=" 22"/>

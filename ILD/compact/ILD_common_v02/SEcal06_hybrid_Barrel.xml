@@ -18,7 +18,7 @@
 
   <detectors>
 
-    <detector name="EcalBarrelFastSimTrigger" type="PolyhedralBarrelSurfaces" region="EcalBarrelFastSimTriggerRegion" readout="ECalBarrelFaceReadout">
+    <detector name="EcalBarrelFastSimTrigger" type="PolyhedralBarrelSurfaces" id="ILDDetID_ECAL_BARREL_FACE" region="EcalBarrelFastSimTriggerRegion" readout="ECalBarrelFaceReadout">
       <comment> EM Calorimeter Fast Sim Trigger Region </comment>
        
       <envelope vis="ILD_ECALVis">
