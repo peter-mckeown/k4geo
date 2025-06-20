@@ -71,7 +71,7 @@ static Ref_t create_element(Detector& theDetector, xml_h element, SensitiveDetec
   Material mat      = envelope.material() ;      
   //--------------------------------------
 
-  sens.setType("calorimeter");
+ // sens.setType("calorimeter");
   //sens.setType("tracker");
 
   // base vectors for surfaces:
@@ -88,7 +88,7 @@ static Ref_t create_element(Detector& theDetector, xml_h element, SensitiveDetec
 
   Volume phVol( name + std::string("_vol") , phSolid ,  mat ) ;
     
-  phVol.setSensitiveDetector(sens);
+  //phVol.setSensitiveDetector(sens);
   
   //fixme: the drawing of endcap surfaces in a polyhedral shape does not work right now 
   //       -> set surface to be invisible for now
@@ -110,7 +110,7 @@ static Ref_t create_element(Detector& theDetector, xml_h element, SensitiveDetec
   
   //  Volume phVol( name + std::string("_bwd") , phSolid ,  mat ) ;
   
-  phVol.setSensitiveDetector(sens);
+  //phVol.setSensitiveDetector(sens);
   
   
   volSurfaceList( bwdDE  )->push_back(  surf ) ;

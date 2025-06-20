@@ -71,7 +71,7 @@ static Ref_t create_element(Detector& theDetector, xml_h element, SensitiveDetec
   double width_half = tan( alpha ) * inner_r ;
 
 
-  sens.setType("calorimeter");
+  //sens.setType("calorimeter");
   //sens.setType("tracker");
 
   // base vectors for surfaces:
@@ -91,7 +91,7 @@ static Ref_t create_element(Detector& theDetector, xml_h element, SensitiveDetec
 
     Volume boxVol( name + _toString( i,"_module_%d") , boxSolid ,  mat ) ;
 
-    boxVol.setSensitiveDetector(sens);
+    //boxVol.setSensitiveDetector(sens);
 
     VolPlane surf( boxVol,SurfaceType(SurfaceType::Sensitive), thick/4., thick/4., u,v,n ) ;
 	      
