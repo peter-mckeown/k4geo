@@ -71,7 +71,8 @@ static Ref_t create_element(Detector& theDetector, xml_h element, SensitiveDetec
   double width_half = tan( alpha ) * inner_r ;
 
 
-  sens.setType("tracker");
+  sens.setType("calorimeter");
+  //sens.setType("tracker");
 
   // base vectors for surfaces:
   Vector3D u(0,1,0) ;
